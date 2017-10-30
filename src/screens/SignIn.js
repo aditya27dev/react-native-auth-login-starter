@@ -3,7 +3,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  BackHandler
 } from 'react-native';
 import { InputField, Button } from '../components';
 import { NavigationActions } from 'react-navigation';
@@ -16,6 +17,14 @@ export default class SignIn extends Component {
       username: null,
       password: null
     }
+  }
+  componentDidMount(){
+    const { navigation } = this.props;
+    BackHandler.addEventListener('hardwareBackPress', function() {
+      if(navigation.state.routeName == 'SignIn'){
+        BackHandler.exitApp()
+      }
+    });
   }
   render() {
     const { username, password } = this.state;

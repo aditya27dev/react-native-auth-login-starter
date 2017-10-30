@@ -10,27 +10,6 @@ export const SignedIn = StackNavigator({
     navigationOptions: {
       header: null
     }
-  },
-  SignedOut: {
-    screen: StackNavigator({
-      SignIn: {
-        screen: SignIn,
-        navigationOptions: {
-          title: "Sign In",
-          header: null
-        }
-      },
-      SignUp: {
-        screen: SignUp,
-        navigationOptions: {
-          title: "Sign Up",
-          header: null
-        }
-      }
-    }),
-    navigationOptions: {
-      header: null
-    }
   }
 });
 

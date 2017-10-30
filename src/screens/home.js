@@ -3,7 +3,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  AsyncStorage
 } from 'react-native';
 import { Button } from '../components';
 import { onSignOut } from "../auth";
@@ -26,14 +27,10 @@ export default class Home extends Component {
           <Button
             onChangeText={() => {
               onSignOut().then(() => {
-                this.props.navigation.dispatch(NavigationActions.reset({
-                  index: 0,
-                  actions: [
-                    NavigationActions.navigate({ routeName: 'SignedOut' })
-                  ]
-                })
-              )
-            })}}
+                AsyncStorage.removeItem("user_key")
+                navigate('SignedOut');
+              })
+            }}
             text="Sign out"
           />
         </View>
