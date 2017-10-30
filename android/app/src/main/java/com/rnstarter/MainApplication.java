@@ -1,4 +1,4 @@
-package com.childrencircle;
+package com.rnstarter;
 
 import android.app.Application;
 
