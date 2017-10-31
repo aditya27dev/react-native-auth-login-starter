@@ -1,6 +1,5 @@
 import { StackNavigator } from "react-navigation";
 
-import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
 import Home from "./screens/home";
 
@@ -20,16 +19,6 @@ export const SignedOut = StackNavigator({
       title: "Sign In",
       header: null
     }
-  },
-  SignUp: {
-    screen: SignUp,
-    navigationOptions: {
-      title: "Sign Up",
-      header: null
-    }
-  },
-  SignedIn: {
-    screen: SignedIn
   }
 });
 

@@ -49,13 +49,7 @@ export default class SignIn extends Component {
             <Button
               onChangeText={() => {
                 onSignIn().then(() => {
-                  this.props.navigation.dispatch(NavigationActions.reset({
-                    index: 0,
-                    actions: [
-                      NavigationActions.navigate({ routeName: 'SignedIn' })
-                    ]
-                    })
-                  )
+                  navigate('SignedIn');
                 })
               }}
               text="Login"

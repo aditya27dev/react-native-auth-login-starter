@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Text,
   View,
+  BackHandler,
   AsyncStorage
 } from 'react-native';
 import { Button } from '../components';
@@ -11,6 +12,14 @@ import { onSignOut } from "../auth";
 import { NavigationActions } from 'react-navigation';
 
 export default class Home extends Component {
+  componentDidMount(){
+    const { navigation } = this.props;
+    BackHandler.addEventListener('hardwareBackPress', function() {
+      if(navigation.state.routeName == 'Home'){
+        BackHandler.exitApp()
+      }
+    });
+  }
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -44,7 +53,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#fff',
   },
   welcome: {
     fontSize: 20,
