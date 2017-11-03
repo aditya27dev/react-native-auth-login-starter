@@ -6,12 +6,12 @@ iOS and Android Both
 
 # Usage
 
-- For Android
+For Android
 
 * npm install<br>
 * react-native run-android<br><br>
 
-- For iOS
+For iOS
 
 * npm install<br>
 * react-native run-ios or Use Xcode<br><br>
