@@ -2,8 +2,7 @@
 This is a react-native starter pack with login and signup authentication flow using react-navigation.
 
 # Support
-Android Only for now<br>
-Will come soon for iOS
+iOS and Android Both
 
 # Usage
 * npm install<br>
