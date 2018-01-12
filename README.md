@@ -6,6 +6,10 @@ iOS and Android Both
 
 # Usage
 
+git clone https://github.com/MrPeproni/react-native-auth-login-starter
+
+cd react-native-auth-login-starter
+
 For Android
 
 * npm install<br>
